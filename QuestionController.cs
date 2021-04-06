@@ -4,6 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+
+/*
+*
+* This script's purpose is to manage the Questions in our game's conversation system.
+* A Question is a Unity ScriptableObject with text for the Question's text, as well as
+* a list of answers to choose between. Depending on the QuestionType enum value of the
+* Question, these answers are displayed as either multiple choice, or toggle (choose all
+* that apply) answers. If the QuestionType is FreeResponse, then the answers aren't used,
+* and instead a free response box appears. Nothing is done with the text of the free response
+* box, since our clients didn't want to grade what people wrote in them anyways.
+*
+*/
+
+
+
+
+
 public class QuestionController : MonoBehaviour
 {
     public Question question;
