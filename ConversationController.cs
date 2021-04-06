@@ -3,6 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/*
+*
+* The purpose of this script is to control the Conversation system of "Gaming for High Value Care".
+* A Conversation, and the Lines it is built from, are Unity ScriptableObjects. Lines contain the text
+* of the line, as well as an audioClip, and an eventID for any events that are scheduled to happen when that
+* line of the conversation is reached. A Conversation contains 2 Character ScriptableObjects (which for now
+* is simply a Name string) for the speakers of the Conversation, as well as an array of Lines, a Question,
+* and a Conversation.
+*
+* When the lines of the conversation are finished, the script checks if there is a Question, and then sets
+* up the question. If instead of a Question, there is a Conversation (nextConversation) attached to the active conversation
+* then the script will start nextConversation. The script is also responsible for opening and closing the Conversation UI.
+*
+*/
+
+
+
 // QuestionEvents are caught by the Conversation prefab to switch between conversation and questions
 [System.Serializable]
 public class QuestionEvent : UnityEvent<Question> { } 
