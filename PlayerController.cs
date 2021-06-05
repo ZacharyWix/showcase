@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    //This script is the character controller for an in-development game that I am working on. As such, not everything is fully implemented yet
+
     //Player movement script
     //Contains jumping, attacking, moving, and recoil mechanics.
     //animator references commented out for later use when implemented.
